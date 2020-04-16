@@ -1,6 +1,6 @@
 ![enter image description here](http://tuzlaapp.com/images/logo-black.png)
 
-## Qzzz.Me
+## Qzzz.Me Core
 Online learning tool made to help people practice and master whatever they are learning
 Not Production ready Qzzz.me Backend Layer.
 With collaborative efforts from  Tuzla For Smart App's ,
