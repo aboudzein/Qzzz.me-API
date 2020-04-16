@@ -6,7 +6,7 @@ Not Production ready Qzzz.me Backend Layer.
 With collaborative efforts from  Tuzla For Smart App's ,
 
 ## Technology
-
+Built using :
  - Django 2.2.6  LTS & Django RestAPI Framework
  - Smart Logging for Database, Requests 
  - Elastic Solutions (FileBeat, MetricBeat and HeartBeat) 
