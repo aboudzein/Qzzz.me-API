@@ -853,3 +853,396 @@ none [(0.001)
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None] 16-04-2020 01:04:50
 none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 01:04:50
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:31:46
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 06:31:46
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "social_auth_association" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "handle" varchar(255) NOT NULL, "secret" varchar(255) NOT NULL, "issued" integer NOT NULL, "lifetime" integer NOT NULL, "assoc_type" varchar(64) NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.001) CREATE TABLE "social_auth_association" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "handle" varchar(255) NOT NULL, "secret" varchar(255) NOT NULL, "issued" integer NOT NULL, "lifetime" integer NOT NULL, "assoc_type" varchar(64) NOT NULL); args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(75) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.000) CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(75) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL); args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "social_auth_nonce" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "timestamp" integer NOT NULL, "salt" varchar(65) NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.000) CREATE TABLE "social_auth_nonce" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "timestamp" integer NOT NULL, "salt" varchar(65) NOT NULL); args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "qzzzme_app_user" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)] 16-04-2020 06:34:24
+none [(0.000) CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "qzzzme_app_user" ("id") DEFERRABLE INITIALLY DEFERRED); args=None] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_uid_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_uid_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); args=()] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_code_email_code_801b2d02_uniq" ON "social_auth_code" ("email", "code"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_code_email_code_801b2d02_uniq" ON "social_auth_code" ("email", "code"); args=()] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_nonce_server_url_timestamp_salt_f6284463_uniq" ON "social_auth_nonce" ("server_url", "timestamp", "salt"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_nonce_server_url_timestamp_salt_f6284463_uniq" ON "social_auth_nonce" ("server_url", "timestamp", "salt"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0001_initial', '2020-04-16 06:34:24.798066'); args=['default', '0001_initial', '2020-04-16 06:34:24.798066']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0001_initial', '2020-04-16 06:34:24.799215'); args=['social_auth', '0001_initial', '2020-04-16 06:34:24.799215']] 16-04-2020 06:34:24
+none [(0.001) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_code_code_a2393167" ON "social_auth_code" ("code"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_code_code_a2393167" ON "social_auth_code" ("code"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_usersocialauth_user_id_17d28448" ON "social_auth_usersocialauth" ("user_id"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_usersocialauth_user_id_17d28448" ON "social_auth_usersocialauth" ("user_id"); args=()] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "new__social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "qzzzme_app_user" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)] 16-04-2020 06:34:24
+none [(0.001) CREATE TABLE "new__social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "qzzzme_app_user" ("id") DEFERRABLE INITIALLY DEFERRED); args=None] 16-04-2020 06:34:24
+none [INSERT INTO "new__social_auth_usersocialauth" ("id", "provider", "uid", "extra_data", "user_id") SELECT "id", "provider", "uid", "extra_data", "user_id" FROM "social_auth_usersocialauth"; (params ())] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "new__social_auth_usersocialauth" ("id", "provider", "uid", "extra_data", "user_id") SELECT "id", "provider", "uid", "extra_data", "user_id" FROM "social_auth_usersocialauth"; args=()] 16-04-2020 06:34:24
+none [DROP TABLE "social_auth_usersocialauth"; (params ())] 16-04-2020 06:34:24
+none [(0.000) DROP TABLE "social_auth_usersocialauth"; args=()] 16-04-2020 06:34:24
+none [ALTER TABLE "new__social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth"; (params ())] 16-04-2020 06:34:24
+none [(0.001) ALTER TABLE "new__social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth"; args=()] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_uid_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_uid_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_usersocialauth_user_id_17d28448" ON "social_auth_usersocialauth" ("user_id"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_usersocialauth_user_id_17d28448" ON "social_auth_usersocialauth" ("user_id"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0002_add_related_name', '2020-04-16 06:34:24.819398'); args=['default', '0002_add_related_name', '2020-04-16 06:34:24.819398']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0002_add_related_name', '2020-04-16 06:34:24.820186'); args=['social_auth', '0002_add_related_name', '2020-04-16 06:34:24.820186']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "new__social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "code" varchar(32) NOT NULL, "verified" bool NOT NULL, "email" varchar(254) NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.000) CREATE TABLE "new__social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "code" varchar(32) NOT NULL, "verified" bool NOT NULL, "email" varchar(254) NOT NULL); args=None] 16-04-2020 06:34:24
+none [INSERT INTO "new__social_auth_code" ("id", "code", "verified", "email") SELECT "id", "code", "verified", "email" FROM "social_auth_code"; (params ())] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "new__social_auth_code" ("id", "code", "verified", "email") SELECT "id", "code", "verified", "email" FROM "social_auth_code"; args=()] 16-04-2020 06:34:24
+none [DROP TABLE "social_auth_code"; (params ())] 16-04-2020 06:34:24
+none [(0.000) DROP TABLE "social_auth_code"; args=()] 16-04-2020 06:34:24
+none [ALTER TABLE "new__social_auth_code" RENAME TO "social_auth_code"; (params ())] 16-04-2020 06:34:24
+none [(0.002) ALTER TABLE "new__social_auth_code" RENAME TO "social_auth_code"; args=()] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_code_email_code_801b2d02_uniq" ON "social_auth_code" ("email", "code"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_code_email_code_801b2d02_uniq" ON "social_auth_code" ("email", "code"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_code_code_a2393167" ON "social_auth_code" ("code"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_code_code_a2393167" ON "social_auth_code" ("code"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0003_alter_email_max_length', '2020-04-16 06:34:24.830956'); args=['default', '0003_alter_email_max_length', '2020-04-16 06:34:24.830956']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0003_alter_email_max_length', '2020-04-16 06:34:24.831759'); args=['social_auth', '0003_alter_email_max_length', '2020-04-16 06:34:24.831759']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "new__social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "user_id" integer NOT NULL REFERENCES "qzzzme_app_user" ("id") DEFERRABLE INITIALLY DEFERRED, "extra_data" text NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.001) CREATE TABLE "new__social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "user_id" integer NOT NULL REFERENCES "qzzzme_app_user" ("id") DEFERRABLE INITIALLY DEFERRED, "extra_data" text NOT NULL); args=None] 16-04-2020 06:34:24
+none [INSERT INTO "new__social_auth_usersocialauth" ("id", "provider", "uid", "user_id", "extra_data") SELECT "id", "provider", "uid", "user_id", "extra_data" FROM "social_auth_usersocialauth"; (params ())] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "new__social_auth_usersocialauth" ("id", "provider", "uid", "user_id", "extra_data") SELECT "id", "provider", "uid", "user_id", "extra_data" FROM "social_auth_usersocialauth"; args=()] 16-04-2020 06:34:24
+none [DROP TABLE "social_auth_usersocialauth"; (params ())] 16-04-2020 06:34:24
+none [(0.000) DROP TABLE "social_auth_usersocialauth"; args=()] 16-04-2020 06:34:24
+none [ALTER TABLE "new__social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth"; (params ())] 16-04-2020 06:34:24
+none [(0.001) ALTER TABLE "new__social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth"; args=()] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_uid_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_uid_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_usersocialauth_user_id_17d28448" ON "social_auth_usersocialauth" ("user_id"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_usersocialauth_user_id_17d28448" ON "social_auth_usersocialauth" ("user_id"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0004_auto_20160423_0400', '2020-04-16 06:34:24.851950'); args=['default', '0004_auto_20160423_0400', '2020-04-16 06:34:24.851950']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0004_auto_20160423_0400', '2020-04-16 06:34:24.852827'); args=['social_auth', '0004_auto_20160423_0400', '2020-04-16 06:34:24.852827']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_association_server_url_handle_078befa2_uniq" ON "social_auth_association" ("server_url", "handle"); (params ())] 16-04-2020 06:34:24
+none [(0.001) CREATE UNIQUE INDEX "social_auth_association_server_url_handle_078befa2_uniq" ON "social_auth_association" ("server_url", "handle"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0005_auto_20160727_2333', '2020-04-16 06:34:24.859509'); args=['social_auth', '0005_auto_20160727_2333', '2020-04-16 06:34:24.859509']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "social_auth_partial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(32) NOT NULL, "next_step" smallint unsigned NOT NULL CHECK ("next_step" >= 0), "backend" varchar(32) NOT NULL, "data" text NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.001) CREATE TABLE "social_auth_partial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(32) NOT NULL, "next_step" smallint unsigned NOT NULL CHECK ("next_step" >= 0), "backend" varchar(32) NOT NULL, "data" text NOT NULL); args=None] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0006_partial', '2020-04-16 06:34:24.865069'); args=['social_django', '0006_partial', '2020-04-16 06:34:24.865069']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_partial_token_3017fea3" ON "social_auth_partial" ("token"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_partial_token_3017fea3" ON "social_auth_partial" ("token"); args=()] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "new__social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(254) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL, "timestamp" datetime NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.000) CREATE TABLE "new__social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(254) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL, "timestamp" datetime NOT NULL); args=None] 16-04-2020 06:34:24
+none [INSERT INTO "new__social_auth_code" ("id", "email", "code", "verified", "timestamp") SELECT "id", "email", "code", "verified", '2020-04-16 06:34:24.870360' FROM "social_auth_code"; (params ())] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "new__social_auth_code" ("id", "email", "code", "verified", "timestamp") SELECT "id", "email", "code", "verified", '2020-04-16 06:34:24.870360' FROM "social_auth_code"; args=()] 16-04-2020 06:34:24
+none [DROP TABLE "social_auth_code"; (params ())] 16-04-2020 06:34:24
+none [(0.000) DROP TABLE "social_auth_code"; args=()] 16-04-2020 06:34:24
+none [ALTER TABLE "new__social_auth_code" RENAME TO "social_auth_code"; (params ())] 16-04-2020 06:34:24
+none [(0.002) ALTER TABLE "new__social_auth_code" RENAME TO "social_auth_code"; args=()] 16-04-2020 06:34:24
+none [CREATE UNIQUE INDEX "social_auth_code_email_code_801b2d02_uniq" ON "social_auth_code" ("email", "code"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE UNIQUE INDEX "social_auth_code_email_code_801b2d02_uniq" ON "social_auth_code" ("email", "code"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_code_code_a2393167" ON "social_auth_code" ("code"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_code_code_a2393167" ON "social_auth_code" ("code"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_code_timestamp_176b341f" ON "social_auth_code" ("timestamp"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_code_timestamp_176b341f" ON "social_auth_code" ("timestamp"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0007_code_timestamp', '2020-04-16 06:34:24.876732'); args=['social_django', '0007_code_timestamp', '2020-04-16 06:34:24.876732']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = OFF; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys; args=None] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [CREATE TABLE "new__social_auth_partial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(32) NOT NULL, "next_step" smallint unsigned NOT NULL CHECK ("next_step" >= 0), "backend" varchar(32) NOT NULL, "data" text NOT NULL, "timestamp" datetime NOT NULL); (params None)] 16-04-2020 06:34:24
+none [(0.001) CREATE TABLE "new__social_auth_partial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(32) NOT NULL, "next_step" smallint unsigned NOT NULL CHECK ("next_step" >= 0), "backend" varchar(32) NOT NULL, "data" text NOT NULL, "timestamp" datetime NOT NULL); args=None] 16-04-2020 06:34:24
+none [INSERT INTO "new__social_auth_partial" ("id", "token", "next_step", "backend", "data", "timestamp") SELECT "id", "token", "next_step", "backend", "data", '2020-04-16 06:34:24.882087' FROM "social_auth_partial"; (params ())] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "new__social_auth_partial" ("id", "token", "next_step", "backend", "data", "timestamp") SELECT "id", "token", "next_step", "backend", "data", '2020-04-16 06:34:24.882087' FROM "social_auth_partial"; args=()] 16-04-2020 06:34:24
+none [DROP TABLE "social_auth_partial"; (params ())] 16-04-2020 06:34:24
+none [(0.000) DROP TABLE "social_auth_partial"; args=()] 16-04-2020 06:34:24
+none [ALTER TABLE "new__social_auth_partial" RENAME TO "social_auth_partial"; (params ())] 16-04-2020 06:34:24
+none [(0.002) ALTER TABLE "new__social_auth_partial" RENAME TO "social_auth_partial"; args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_partial_token_3017fea3" ON "social_auth_partial" ("token"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_partial_token_3017fea3" ON "social_auth_partial" ("token"); args=()] 16-04-2020 06:34:24
+none [CREATE INDEX "social_auth_partial_timestamp_50f2119f" ON "social_auth_partial" ("timestamp"); (params ())] 16-04-2020 06:34:24
+none [(0.000) CREATE INDEX "social_auth_partial_timestamp_50f2119f" ON "social_auth_partial" ("timestamp"); args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0008_partial_timestamp', '2020-04-16 06:34:24.888577'); args=['social_django', '0008_partial_timestamp', '2020-04-16 06:34:24.888577']] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_key_check; args=None] 16-04-2020 06:34:24
+none [(0.000) PRAGMA foreign_keys = ON; args=None] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0002_add_related_name', '2020-04-16 06:34:24.891772'); args=['social_django', '0002_add_related_name', '2020-04-16 06:34:24.891772']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0001_initial', '2020-04-16 06:34:24.893529'); args=['social_django', '0001_initial', '2020-04-16 06:34:24.893529']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0005_auto_20160727_2333', '2020-04-16 06:34:24.895228'); args=['social_django', '0005_auto_20160727_2333', '2020-04-16 06:34:24.895228']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0004_auto_20160423_0400', '2020-04-16 06:34:24.897108'); args=['social_django', '0004_auto_20160423_0400', '2020-04-16 06:34:24.897108']] 16-04-2020 06:34:24
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 06:34:24
+none [(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0003_alter_email_max_length', '2020-04-16 06:34:24.898772'); args=['social_django', '0003_alter_email_max_length', '2020-04-16 06:34:24.898772']] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')] 16-04-2020 06:34:24
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')] 16-04-2020 06:34:24
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')] 16-04-2020 06:34:24
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4,)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')] 16-04-2020 06:34:24
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework'; args=('rest_framework',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework'; args=('rest_framework',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'social_django'; args=('social_django',)] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [(0.000) INSERT INTO "django_content_type" ("app_label", "model") SELECT 'social_django', 'association' UNION ALL SELECT 'social_django', 'code' UNION ALL SELECT 'social_django', 'nonce' UNION ALL SELECT 'social_django', 'usersocialauth' UNION ALL SELECT 'social_django', 'partial'; args=('social_django', 'association', 'social_django', 'code', 'social_django', 'nonce', 'social_django', 'usersocialauth', 'social_django', 'partial')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'association'); args=('social_django', 'association')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'code'); args=('social_django', 'code')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'nonce'); args=('social_django', 'nonce')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'usersocialauth'); args=('social_django', 'usersocialauth')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'partial'); args=('social_django', 'partial')] 16-04-2020 06:34:24
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 11, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 11, 12)] 16-04-2020 06:34:24
+none [(0.000) BEGIN; args=None] 16-04-2020 06:34:24
+none [(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add association', 8, 'add_association' UNION ALL SELECT 'Can change association', 8, 'change_association' UNION ALL SELECT 'Can delete association', 8, 'delete_association' UNION ALL SELECT 'Can view association', 8, 'view_association' UNION ALL SELECT 'Can add code', 9, 'add_code' UNION ALL SELECT 'Can change code', 9, 'change_code' UNION ALL SELECT 'Can delete code', 9, 'delete_code' UNION ALL SELECT 'Can view code', 9, 'view_code' UNION ALL SELECT 'Can add nonce', 10, 'add_nonce' UNION ALL SELECT 'Can change nonce', 10, 'change_nonce' UNION ALL SELECT 'Can delete nonce', 10, 'delete_nonce' UNION ALL SELECT 'Can view nonce', 10, 'view_nonce' UNION ALL SELECT 'Can add user social auth', 11, 'add_usersocialauth' UNION ALL SELECT 'Can change user social auth', 11, 'change_usersocialauth' UNION ALL SELECT 'Can delete user social auth', 11, 'delete_usersocialauth' UNION ALL SELECT 'Can view user social auth', 11, 'view_usersocialauth' UNION ALL SELECT 'Can add partial', 12, 'add_partial' UNION ALL SELECT 'Can change partial', 12, 'change_partial' UNION ALL SELECT 'Can delete partial', 12, 'delete_partial' UNION ALL SELECT 'Can view partial', 12, 'view_partial'; args=('Can add association', 8, 'add_association', 'Can change association', 8, 'change_association', 'Can delete association', 8, 'delete_association', 'Can view association', 8, 'view_association', 'Can add code', 9, 'add_code', 'Can change code', 9, 'change_code', 'Can delete code', 9, 'delete_code', 'Can view code', 9, 'view_code', 'Can add nonce', 10, 'add_nonce', 'Can change nonce', 10, 'change_nonce', 'Can delete nonce', 10, 'delete_nonce', 'Can view nonce', 10, 'view_nonce', 'Can add user social auth', 11, 'add_usersocialauth', 'Can change user social auth', 11, 'change_usersocialauth', 'Can delete user social auth', 11, 'delete_usersocialauth', 'Can view user social auth', 11, 'view_usersocialauth', 'Can add partial', 12, 'add_partial', 'Can change partial', 12, 'change_partial', 'Can delete partial', 12, 'delete_partial', 'Can view partial', 12, 'view_partial')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'social_django'; args=('social_django',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'qzzzme_app'; args=('qzzzme_app',)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'qzzzme_app' AND "django_content_type"."model" = 'user'); args=('qzzzme_app', 'user')] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'qzzzme_app' AND "django_content_type"."model" = 'projects'); args=('qzzzme_app', 'projects')] 16-04-2020 06:34:24
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6, 7)] 16-04-2020 06:34:24
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'qzzzme_app'; args=('qzzzme_app',)] 16-04-2020 06:34:24
+none [(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:29:48
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:29:48
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:29:48
+none [(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')] 16-04-2020 07:29:48
+none [(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')] 16-04-2020 07:29:48
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')] 16-04-2020 07:29:48
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4,)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')] 16-04-2020 07:29:48
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework'; args=('rest_framework',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework'; args=('rest_framework',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'social_django'; args=('social_django',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'association'); args=('social_django', 'association')] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'code'); args=('social_django', 'code')] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'nonce'); args=('social_django', 'nonce')] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'usersocialauth'); args=('social_django', 'usersocialauth')] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'social_django' AND "django_content_type"."model" = 'partial'); args=('social_django', 'partial')] 16-04-2020 07:29:48
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 11, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 11, 12)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'social_django'; args=('social_django',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'qzzzme_app'; args=('qzzzme_app',)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'qzzzme_app' AND "django_content_type"."model" = 'user'); args=('qzzzme_app', 'user')] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'qzzzme_app' AND "django_content_type"."model" = 'projects'); args=('qzzzme_app', 'projects')] 16-04-2020 07:29:48
+none [(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6, 7)] 16-04-2020 07:29:48
+none [(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'qzzzme_app'; args=('qzzzme_app',)] 16-04-2020 07:29:48
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:29:53
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:29:53
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:32:32
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:32:32
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:32:45
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:32:45
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:36:39
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:36:39
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:39:15
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:39:15
+5d925996ed9e4db3a90af8df424e6290 [(0.002) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'  LIMIT 1; args=('tr9hhguurjqav9poah8044q87hq1a6uk',)] 16-04-2020 07:44:08
+5d925996ed9e4db3a90af8df424e6290 [(0.000) BEGIN; args=None] 16-04-2020 07:44:08
+5d925996ed9e4db3a90af8df424e6290 [(0.051) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'tr9hhguurjqav9poah8044q87hq1a6uk', 'ZjIzZjdhNjYwNzg1NWE1YWRiYzlmMWIwOTA1YWUyZmU4NzQ2YzM1NDp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiI0MXJ6MWZVWkxRSVZmTURoUENRb0F6RFROSnVnNmhLdyJ9', '2020-04-30 07:44:08.114255'; args=('tr9hhguurjqav9poah8044q87hq1a6uk', 'ZjIzZjdhNjYwNzg1NWE1YWRiYzlmMWIwOTA1YWUyZmU4NzQ2YzM1NDp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiI0MXJ6MWZVWkxRSVZmTURoUENRb0F6RFROSnVnNmhLdyJ9', '2020-04-30 07:44:08.114255')] 16-04-2020 07:44:08
+f8b0f561ca6540ef995c04cea29a3af7 [(0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '6smh2r0o8q4rukgeduecwfp9fhrld0to'  LIMIT 1; args=('6smh2r0o8q4rukgeduecwfp9fhrld0to',)] 16-04-2020 07:47:40
+f8b0f561ca6540ef995c04cea29a3af7 [(0.000) BEGIN; args=None] 16-04-2020 07:47:40
+f8b0f561ca6540ef995c04cea29a3af7 [(0.002) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '6smh2r0o8q4rukgeduecwfp9fhrld0to', 'YWNjZmExNzhmZWU2MzlhODI3M2E2OGIwOWY3YjJkNTEzODM2M2JiYzp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiJ2Y21SN3pxRUd5d3pac3pqVFlZcXFHZ0VGS3l6WnFIWSJ9', '2020-04-30 07:47:40.990072'; args=('6smh2r0o8q4rukgeduecwfp9fhrld0to', 'YWNjZmExNzhmZWU2MzlhODI3M2E2OGIwOWY3YjJkNTEzODM2M2JiYzp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiJ2Y21SN3pxRUd5d3pac3pqVFlZcXFHZ0VGS3l6WnFIWSJ9', '2020-04-30 07:47:40.990072')] 16-04-2020 07:47:40
+e6a0ace213184a338775963ac77d8cae [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 07:48:04.402794' AND "django_session"."session_key" = '6smh2r0o8q4rukgeduecwfp9fhrld0to'); args=('2020-04-16 07:48:04.402794', '6smh2r0o8q4rukgeduecwfp9fhrld0to')] 16-04-2020 07:48:04
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 07:51:45
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 07:51:45
+91916d7e576243bca910173bac9dda62 [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 07:52:19.031217' AND "django_session"."session_key" = '6smh2r0o8q4rukgeduecwfp9fhrld0to'); args=('2020-04-16 07:52:19.031217', '6smh2r0o8q4rukgeduecwfp9fhrld0to')] 16-04-2020 07:52:19
+51a6f6d9693145fe980cc5c13f305a05 [(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 07:55:46.313576' AND "django_session"."session_key" = '6smh2r0o8q4rukgeduecwfp9fhrld0to'); args=('2020-04-16 07:55:46.313576', '6smh2r0o8q4rukgeduecwfp9fhrld0to')] 16-04-2020 07:55:46
+a206e28926db4f61b653a4784818e108 [(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 13:52:00.530338' AND "django_session"."session_key" = '6smh2r0o8q4rukgeduecwfp9fhrld0to'); args=('2020-04-16 13:52:00.530338', '6smh2r0o8q4rukgeduecwfp9fhrld0to')] 16-04-2020 13:52:01
+4f14575790884334916ee99f2e3eb1e8 [(0.007) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:46:56.457411' AND "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'); args=('2020-04-16 14:46:56.457411', 'tr9hhguurjqav9poah8044q87hq1a6uk')] 16-04-2020 14:46:56
+f303bbb3a0fa4a679a274d64402f8f01 [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:47:09.704883' AND "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'); args=('2020-04-16 14:47:09.704883', 'tr9hhguurjqav9poah8044q87hq1a6uk')] 16-04-2020 14:47:09
+5118eebaedad42a4ab6dc5b60377130f [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:49:02.853688' AND "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'); args=('2020-04-16 14:49:02.853688', 'tr9hhguurjqav9poah8044q87hq1a6uk')] 16-04-2020 14:49:02
+3a436d81bbdb429db42514e0808fa89f [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:50:06.283936' AND "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'); args=('2020-04-16 14:50:06.283936', 'tr9hhguurjqav9poah8044q87hq1a6uk')] 16-04-2020 14:50:06
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:50:11.233231' AND "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'); args=('2020-04-16 14:50:11.233231', 'tr9hhguurjqav9poah8044q87hq1a6uk')] 16-04-2020 14:50:11
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) SELECT "social_auth_usersocialauth"."id", "social_auth_usersocialauth"."user_id", "social_auth_usersocialauth"."provider", "social_auth_usersocialauth"."uid", "social_auth_usersocialauth"."extra_data", "qzzzme_app_user"."id", "qzzzme_app_user"."password", "qzzzme_app_user"."last_login", "qzzzme_app_user"."is_superuser", "qzzzme_app_user"."username", "qzzzme_app_user"."email", "qzzzme_app_user"."first_name", "qzzzme_app_user"."last_name", "qzzzme_app_user"."role", "qzzzme_app_user"."created", "qzzzme_app_user"."updated" FROM "social_auth_usersocialauth" INNER JOIN "qzzzme_app_user" ON ("social_auth_usersocialauth"."user_id" = "qzzzme_app_user"."id") WHERE ("social_auth_usersocialauth"."provider" = 'google-oauth2' AND "social_auth_usersocialauth"."uid" = 'aboudzein@gmail.com'); args=('google-oauth2', 'aboudzein@gmail.com')] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) SELECT COUNT(*) AS "__count" FROM "qzzzme_app_user" WHERE "qzzzme_app_user"."email" = 'aboudzein'; args=('aboudzein',)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) BEGIN; args=None] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.004) INSERT INTO "qzzzme_app_user" ("password", "last_login", "is_superuser", "username", "email", "first_name", "last_name", "role", "created", "updated") VALUES ('!ifQae5owU122dPTMnntYlAYu7qgxqm699NvOirZM', '2020-04-16 14:50:12.582814', 0, 'aboudzein', 'aboudzein@gmail.com', '', '', '', '2020-04-16 14:50:12.583994', '2020-04-16 14:50:12.584019'); args=['!ifQae5owU122dPTMnntYlAYu7qgxqm699NvOirZM', '2020-04-16 14:50:12.582814', False, 'aboudzein', 'aboudzein@gmail.com', '', '', '', '2020-04-16 14:50:12.583994', '2020-04-16 14:50:12.584019']] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) BEGIN; args=None] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) INSERT INTO "social_auth_usersocialauth" ("user_id", "provider", "uid", "extra_data") VALUES (1, 'google-oauth2', 'aboudzein@gmail.com', '{}'); args=[1, 'google-oauth2', 'aboudzein@gmail.com', '{}']] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) UPDATE "social_auth_usersocialauth" SET "user_id" = 1, "provider" = 'google-oauth2', "uid" = 'aboudzein@gmail.com', "extra_data" = '{"auth_time": 1587048612, "expires": 3599, "token_type": "Bearer", "access_token": "ya29.a0Ae4lvC1eue8siuKYnHQCUCZIgMTW-wQeJ39R54hmjl75RwG7_5alRaLV19dJtGUtHDq5SyxyBUneqfuC2uvdUnwgb7SCz0XDvlRXS1TYuoIkOdYopF6zZrNPMRHCGNtZy9rEj7GPX5p-YrRPhY8yOdRtRRJ0wGsIk48"}' WHERE "social_auth_usersocialauth"."id" = 1; args=(1, 'google-oauth2', 'aboudzein@gmail.com', '{"auth_time": 1587048612, "expires": 3599, "token_type": "Bearer", "access_token": "ya29.a0Ae4lvC1eue8siuKYnHQCUCZIgMTW-wQeJ39R54hmjl75RwG7_5alRaLV19dJtGUtHDq5SyxyBUneqfuC2uvdUnwgb7SCz0XDvlRXS1TYuoIkOdYopF6zZrNPMRHCGNtZy9rEj7GPX5p-YrRPhY8yOdRtRRJ0wGsIk48"}', 1)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) UPDATE "qzzzme_app_user" SET "password" = '!ifQae5owU122dPTMnntYlAYu7qgxqm699NvOirZM', "last_login" = '2020-04-16 14:50:12.582814', "is_superuser" = 0, "username" = 'aboudzein', "email" = 'aboudzein@gmail.com', "first_name" = 'Abdurahman J.', "last_name" = 'Zeineddin', "role" = '', "created" = '2020-04-16 14:50:12.583994', "updated" = '2020-04-16 14:50:12.597290' WHERE "qzzzme_app_user"."id" = 1; args=('!ifQae5owU122dPTMnntYlAYu7qgxqm699NvOirZM', '2020-04-16 14:50:12.582814', False, 'aboudzein', 'aboudzein@gmail.com', 'Abdurahman J.', 'Zeineddin', '', '2020-04-16 14:50:12.583994', '2020-04-16 14:50:12.597290', 1)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'tk538bjr6ekudhk6nf5oalljjt5zq4bf'  LIMIT 1; args=('tk538bjr6ekudhk6nf5oalljjt5zq4bf',)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) BEGIN; args=None] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'tk538bjr6ekudhk6nf5oalljjt5zq4bf', 'ZjIzZjdhNjYwNzg1NWE1YWRiYzlmMWIwOTA1YWUyZmU4NzQ2YzM1NDp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiI0MXJ6MWZVWkxRSVZmTURoUENRb0F6RFROSnVnNmhLdyJ9', '2020-04-30 14:50:12.601997'; args=('tk538bjr6ekudhk6nf5oalljjt5zq4bf', 'ZjIzZjdhNjYwNzg1NWE1YWRiYzlmMWIwOTA1YWUyZmU4NzQ2YzM1NDp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiI0MXJ6MWZVWkxRSVZmTURoUENRb0F6RFROSnVnNmhLdyJ9', '2020-04-30 14:50:12.601997')] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'tr9hhguurjqav9poah8044q87hq1a6uk'; args=('tr9hhguurjqav9poah8044q87hq1a6uk',)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('tr9hhguurjqav9poah8044q87hq1a6uk'); args=('tr9hhguurjqav9poah8044q87hq1a6uk',)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) UPDATE "qzzzme_app_user" SET "last_login" = '2020-04-16 14:50:12.608786' WHERE "qzzzme_app_user"."id" = 1; args=('2020-04-16 14:50:12.608786', 1)] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.000) BEGIN; args=None] 16-04-2020 14:50:12
+cc27847cd24947f1bac5b2c9c57f8268 [(0.001) UPDATE "django_session" SET "session_data" = 'MzhiZmZkZjE0ZGVkYmU2ZmI5MjczMDE5ZWI5ZDFkYjEyNWY4ZWU5YTp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiI0MXJ6MWZVWkxRSVZmTURoUENRb0F6RFROSnVnNmhLdyIsIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoic29jaWFsX2NvcmUuYmFja2VuZHMuZ29vZ2xlLkdvb2dsZU9BdXRoMiIsIl9hdXRoX3VzZXJfaGFzaCI6IjBjMTU1N2I4YzhjYjVkNWYyZGM1MTFiNjVkMTQ2YjE0YzQwNjAzZmEiLCJzb2NpYWxfYXV0aF9sYXN0X2xvZ2luX2JhY2tlbmQiOiJnb29nbGUtb2F1dGgyIn0=', "expire_date" = '2020-04-30 14:50:12.613185' WHERE "django_session"."session_key" = 'tk538bjr6ekudhk6nf5oalljjt5zq4bf'; args=('MzhiZmZkZjE0ZGVkYmU2ZmI5MjczMDE5ZWI5ZDFkYjEyNWY4ZWU5YTp7Imdvb2dsZS1vYXV0aDJfc3RhdGUiOiI0MXJ6MWZVWkxRSVZmTURoUENRb0F6RFROSnVnNmhLdyIsIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoic29jaWFsX2NvcmUuYmFja2VuZHMuZ29vZ2xlLkdvb2dsZU9BdXRoMiIsIl9hdXRoX3VzZXJfaGFzaCI6IjBjMTU1N2I4YzhjYjVkNWYyZGM1MTFiNjVkMTQ2YjE0YzQwNjAzZmEiLCJzb2NpYWxfYXV0aF9sYXN0X2xvZ2luX2JhY2tlbmQiOiJnb29nbGUtb2F1dGgyIn0=', '2020-04-30 14:50:12.613185', 'tk538bjr6ekudhk6nf5oalljjt5zq4bf')] 16-04-2020 14:50:12
+none [(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None] 16-04-2020 14:54:18
+none [(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()] 16-04-2020 14:54:18
+482136decc104357a915a1aa06100a38 [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:54:34.336316' AND "django_session"."session_key" = 'tk538bjr6ekudhk6nf5oalljjt5zq4bf'); args=('2020-04-16 14:54:34.336316', 'tk538bjr6ekudhk6nf5oalljjt5zq4bf')] 16-04-2020 14:54:34
+10ce532ceae946ce830a9a6fe1e6b3ee [(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 14:54:41.015636' AND "django_session"."session_key" = 'tk538bjr6ekudhk6nf5oalljjt5zq4bf'); args=('2020-04-16 14:54:41.015636', 'tk538bjr6ekudhk6nf5oalljjt5zq4bf')] 16-04-2020 14:54:41
+10ce532ceae946ce830a9a6fe1e6b3ee [(0.000) SELECT "qzzzme_app_user"."id", "qzzzme_app_user"."password", "qzzzme_app_user"."last_login", "qzzzme_app_user"."is_superuser", "qzzzme_app_user"."username", "qzzzme_app_user"."email", "qzzzme_app_user"."first_name", "qzzzme_app_user"."last_name", "qzzzme_app_user"."role", "qzzzme_app_user"."created", "qzzzme_app_user"."updated" FROM "qzzzme_app_user" WHERE "qzzzme_app_user"."id" = 1; args=(1,)] 16-04-2020 14:54:41
+10ce532ceae946ce830a9a6fe1e6b3ee [(0.000) SELECT "social_auth_usersocialauth"."id", "social_auth_usersocialauth"."user_id", "social_auth_usersocialauth"."provider", "social_auth_usersocialauth"."uid", "social_auth_usersocialauth"."extra_data", "qzzzme_app_user"."id", "qzzzme_app_user"."password", "qzzzme_app_user"."last_login", "qzzzme_app_user"."is_superuser", "qzzzme_app_user"."username", "qzzzme_app_user"."email", "qzzzme_app_user"."first_name", "qzzzme_app_user"."last_name", "qzzzme_app_user"."role", "qzzzme_app_user"."created", "qzzzme_app_user"."updated" FROM "social_auth_usersocialauth" INNER JOIN "qzzzme_app_user" ON ("social_auth_usersocialauth"."user_id" = "qzzzme_app_user"."id") WHERE ("social_auth_usersocialauth"."provider" = 'google-oauth2' AND "social_auth_usersocialauth"."uid" = 'aboudzein@gmail.com'); args=('google-oauth2', 'aboudzein@gmail.com')] 16-04-2020 14:54:42
+10ce532ceae946ce830a9a6fe1e6b3ee [(0.007) UPDATE "social_auth_usersocialauth" SET "user_id" = 1, "provider" = 'google-oauth2', "uid" = 'aboudzein@gmail.com', "extra_data" = '{"auth_time": 1587048882, "expires": 3599, "token_type": "Bearer", "access_token": "ya29.a0Ae4lvC14Z2Fbaum_X4JWsqegjaa1XhR_LWrNINkTZgwe00dvpdBBrLsFsqzbC9zQLMicox9bHtxm6WlCHcUM13FiMrlOOwXBEpmPboY3Z7KgecnbS-IiG04zjAynST7ytdUZ90aQ_bWqJrMiI1YXxDxhScTMfsfJjuk"}' WHERE "social_auth_usersocialauth"."id" = 1; args=(1, 'google-oauth2', 'aboudzein@gmail.com', '{"auth_time": 1587048882, "expires": 3599, "token_type": "Bearer", "access_token": "ya29.a0Ae4lvC14Z2Fbaum_X4JWsqegjaa1XhR_LWrNINkTZgwe00dvpdBBrLsFsqzbC9zQLMicox9bHtxm6WlCHcUM13FiMrlOOwXBEpmPboY3Z7KgecnbS-IiG04zjAynST7ytdUZ90aQ_bWqJrMiI1YXxDxhScTMfsfJjuk"}', 1)] 16-04-2020 14:54:42

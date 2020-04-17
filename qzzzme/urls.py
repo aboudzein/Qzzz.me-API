@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
 from graphene_django.views import GraphQLView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'^api/v1.0/boilerplate_apps/',
+    url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
+    url(r'^admin/', admin.site.urls),
+    url(r'^api/v1.0/',
         include("qzzzme_app.urls", namespace="qzzzme_app-api")),
     path("graphql/", GraphQLView.as_view(graphiql=True))
 ]

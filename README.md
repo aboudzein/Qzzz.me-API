@@ -1,4 +1,4 @@
-![enter image description here](http://tuzlaapp.com/images/logo-black.png)
+![enter image description here](./logo.png)
 
 ## Qzzz.Me Core
 Online learning tool made to help people practice and master whatever they are learning
