@@ -39,10 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'django.contrib.sites',
     'rest_framework_swagger',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
     'graphene_django',
-    'social_django',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'qzzzme_app',
+
 ]
 
 MIDDLEWARE = [
@@ -99,6 +107,11 @@ DATABASES = {
 }
 
 
+
+
+SITE_ID = 1
+
+
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -118,9 +131,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
     'DEFAULT_METADATA_CLASS': 'rest_framework.metadata.SimpleMetadata',
     'COERCE_DECIMAL_TO_STRING': False,
@@ -142,15 +152,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-JWT_AUTH = {
-    'JWT_VERIFY_EXPIRATION': True,
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
-    'JWT_ALLOW_REFRESH': False,
-    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
-    'JWT_AUTH_HEADER_PREFIX': 'token',
-}
 
-AUTH_USER_MODEL = 'qzzzme_app.User'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
